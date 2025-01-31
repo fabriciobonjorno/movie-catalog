@@ -1,97 +1,90 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Movie Catalog App
 
-# Getting Started
+This is a **React Native** project that fetches movie data from an API and displays a catalog of films.
+
+![App Screenshot](path/to/your/image.png)  
+(*Replace with the actual path to your app image*)
+
+## Features
+
+- Fetches a list of movies from an external API.
+- Displays movies with title, poster, and details.
+- Allows searching for specific movies.
+- Responsive design for both Android and iOS.
+
+## Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
-## Step 1: Start Metro
+### Step 1: Clone the Repository
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+```sh
+git clone https://github.com/your-username/movie-catalog.git
+cd movie-catalog
+```
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Step 2: Install Dependencies
 
 ```sh
 # Using npm
-npm start
+npm install
 
 # OR using Yarn
-yarn start
+yarn install
 ```
 
-## Step 2: Build and run your app
+### Step 3: Start Metro
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
+Metro is the JavaScript bundler for React Native. Run the following command:
 
 ```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm start  # OR yarn start
 ```
 
-### iOS
+### Step 4: Build and Run the App
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+#### Android
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+```sh
+npm run android  # OR yarn android
+```
+
+#### iOS
+
+First, install CocoaPods dependencies (only needed on first run or after updating native dependencies):
 
 ```sh
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
 bundle exec pod install
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Then, run the app:
 
 ```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm run ios  # OR yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## API Usage
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+This app fetches movies from an external API. Ensure you have the correct API URL and keys configured in your environment file (`.env`). Example:
 
-## Step 3: Modify your app
+```
+API_BASE_URL=https://api.example.com
+API_KEY=your_api_key_here
+```
 
-Now that you have successfully run the app, let's make changes!
+## Customization
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Modify `src/services/api.js` to configure API requests.
+Modify `src/components/MovieCard.js` to customize movie display.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## Troubleshooting
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+If you encounter issues, refer to the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
 
-## Congratulations! :tada:
+## Learn More
 
-You've successfully run and modified your React Native App. :partying_face:
+For more details, check out:
+- [React Native Documentation](https://reactnative.dev/docs/getting-started)
+- [Official React Native GitHub](https://github.com/facebook/react-native)
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
